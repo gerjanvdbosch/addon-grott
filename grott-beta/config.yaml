@@ -1,5 +1,5 @@
 ---
-name: Grott & Grottserver 3.2.1
+name: Grott & Grottserver
 version: dev
 slug: grott-beta
 description: The Growatt inverter monitor with current HA plugin integrated
@@ -17,8 +17,10 @@ map:
   - addon_config:rw
 ports:
   5279/tcp: 5279
+  5782/tcp: 5782
 ports_description:
   5279/tcp: The port used by grott to receive the data of the logger
+  5782:/tcp: Command
 options:
   data_path: /config/grott
   gmode: proxy
