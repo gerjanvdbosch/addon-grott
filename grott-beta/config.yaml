@@ -33,6 +33,7 @@ options:
   ha_plugin: true
   mqtt: {}
 schema:
+  serverpassthrough: bool?
   gblockcmd: bool?
   gcompat: bool?
   gdecrypt: bool?
