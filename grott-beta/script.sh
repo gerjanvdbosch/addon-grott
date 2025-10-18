@@ -183,12 +183,8 @@ if bashio::config.has_value 'gpvdisv1'; then
     gpvdisv1="$(bashio::config 'gpvdisv1')"
     export gpvdisv1
 fi
-if bashio::config.has_value 'gserverpassthrough'; then
-    gserverpassthrough="True"
-    serverpassthrough="True"
-    export gserverpassthrough
-    export serverpassthrough
-fi
+
+export gserverpassthrough=True
 
 if bashio::config.has_value 'grott_mqtt'; then
     if bashio::config.true 'grott_mqtt'; then
