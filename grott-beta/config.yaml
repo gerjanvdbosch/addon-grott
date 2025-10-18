@@ -25,7 +25,7 @@ options:
   data_path: /config/grott
   gmode: server
   grott_mqtt: true
-  serverpassthrough: true
+  gserverpassthrough: true
   ginvtype: default
   ginvtypemap: ""
   retain: false
@@ -67,7 +67,7 @@ schema:
   gmqtttopic: str?
   gmqttuser: str?
   gnoipf: bool?
-  serverpassthrough: bool?
+  gserverpassthrough: bool?
   grott_mqtt: bool?
   gpvapikey: str?
   gpvdisv1: bool?
