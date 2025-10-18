@@ -1,4 +1,4 @@
-# Grott Alpha
+# Grott & Grottserver 3.2.1
 
 ## About
 
