@@ -84,4 +84,3 @@ schema:
     user: str?
     password: str?
   data_path: str
-  
