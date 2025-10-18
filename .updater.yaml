@@ -1,0 +1,7 @@
+---
+channel: edge
+addons:
+  grott:
+    repository: gerjanvdbosch/addon-grott
+    target: grott
+    image: ghcr.io/gerjanvdbosch/grott/{arch}
