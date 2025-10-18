@@ -1,6 +1,6 @@
 ---
 configuration:
-  serverpassthrough:
+  gserverpassthrough:
     name: Server passthrough
     description: Enable to send the data the Growatt server
   verbose:
