@@ -184,9 +184,8 @@ if bashio::config.has_value 'gpvdisv1'; then
     export gpvdisv1
 fi
 if bashio::config.has_value 'gserverpassthrough'; then
-    bashio::log.info "Enable server passthrough"
-    gserverpassthrough="$(bashio::config 'gserverpassthrough')"
-    serverpassthrough="$(bashio::config 'gserverpassthrough')"
+    gserverpassthrough="True"
+    serverpassthrough="True"
     export gserverpassthrough
     export serverpassthrough
 fi
