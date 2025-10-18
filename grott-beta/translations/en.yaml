@@ -1,5 +1,8 @@
 ---
 configuration:
+  serverpassthrough:
+    name: Server passthrough
+    description: Enable to send the data the Growatt server
   verbose:
     name: Verbose mode
     description: Enable the verbose mode. Useful for debugging
