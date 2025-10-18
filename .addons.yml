@@ -1,0 +1,7 @@
+---
+channel: edge
+addons:
+  grott-beta:
+    repository: gerjanvdbosch/addon-grott-beta
+    target: grott-beta
+    image: ghcr.io/gerjanvdbosch/grott-beta/{arch}
