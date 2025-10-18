@@ -16,7 +16,25 @@ if ! bashio::fs.file_exists "$DATA_PATH/grott.ini"; then
     # Create an empty grott.ini
     touch "$DATA_PATH/grott.ini"
     bashio::log.info "Created config directory"
+fi
 
+# Zorg dat [Server] sectie bestaat
+if ! grep -q "^\[Server\]" "$DATA_PATH/grott.ini"; then
+    echo -e "\n[Server]" >> "$DATA_PATH/grott.ini"
+fi
+
+# Haal waarde uit de addon config of default op True
+if bashio::config.has_value 'gserverpassthrough'; then
+    SERVER_PASSTHROUGH=$(bashio::config 'gserverpassthrough')
+else
+    SERVER_PASSTHROUGH="True"
+fi
+
+# Zet of vervang serverpassthrough in ini
+if grep -q "^serverpassthrough" "$DATA_PATH/grott.ini"; then
+    sed -i "s/^serverpassthrough.*/serverpassthrough = $SERVER_PASSTHROUGH/" "$DATA_PATH/grott.ini"
+else
+    echo "serverpassthrough = $SERVER_PASSTHROUGH" >> "$DATA_PATH/grott.ini"
 fi
 
 # Follow shellcheck recommendations
@@ -183,8 +201,6 @@ if bashio::config.has_value 'gpvdisv1'; then
     gpvdisv1="$(bashio::config 'gpvdisv1')"
     export gpvdisv1
 fi
-
-export gserverpassthrough=True
 
 if bashio::config.has_value 'grott_mqtt'; then
     if bashio::config.true 'grott_mqtt'; then
