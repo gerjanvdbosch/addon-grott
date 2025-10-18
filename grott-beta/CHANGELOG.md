@@ -7,6 +7,7 @@
 ## 1.0.0
 
 - Use latest grott 3.2.1
+- Added configuration option to expose port 5782
 
 ## 0.1.8
 
