@@ -1,9 +1,9 @@
 ---
-name: Grott Alpha branch (3.2)
+name: Grott & Grottserver 3.2.1
 version: dev
 slug: grott-beta
 description: The Growatt inverter monitor with current HA plugin integrated
-url: https://github.com/gerjanvdbosch/addon-grott-beta
+url: https://github.com/gerjanvdbosch/addon-grott
 arch:
   - armhf
   - armv7
