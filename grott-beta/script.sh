@@ -121,6 +121,10 @@ if bashio::config.has_value 'gmqttport'; then
     gmqttport="$(bashio::config 'gmqttport')"
     export gmqttport
 fi
+if bashio::config.has_value 'gmqttinverterintopic'; then
+    gmqttinverterintopic="$(bashio::config 'gmqttinverterintopic')"
+    export gmqttinverterintopic
+fi
 if bashio::config.has_value 'gmqtttopic'; then
     gmqtttopic="$(bashio::config 'gmqtttopic')"
     export gmqtttopic
