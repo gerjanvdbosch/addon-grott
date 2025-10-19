@@ -14,6 +14,7 @@
     - [Compatibility with homeassistant-grott](#compatibility-with-homeassistant-grott)
   - [Configuration of grott](#configuration-of-grott)
     - [PVOuput](#pvouput)
+  - [Configuration of the datalogger and inverter](#configuration-of-the-datalogger-and-inverter)
 
 <!-- /code_chunk_output -->
 
@@ -128,3 +129,33 @@ You can create/modify the `grott.ini` using the file editor add-on or VS Code ad
 ### PVOuput
 
 [How to configure PVOutput](https://github.com/johanmeijer/grott/wiki/PVOutput.org-support)
+
+## Configuration of the datalogger and inverter
+
+### Datalogger
+
+Command to view datalogger the update frequency
+
+```
+GET http://[your-ip]:5782/datalogger?command=register&register=4&datalogger=[datalogger-id]
+```
+
+Command to set datalogger the update frequency to 6 seconds (value is in minutes)
+
+```
+PUT http://[your-ip]:5782/datalogger?command=register&register=4&datalogger=[datalogger-id]&value=0.1
+```
+
+### Inverter
+
+Command to view the inverter power
+
+```
+GET http://[your-ip]:5782/inverter?command=register&register=3&inverter=[inverter-id]&format=dec
+```
+
+Command to set the inverter power to 50%
+
+```
+PUT http://[your-ip]:5782/inverter?command=register&register=3&inverter=[inverter-id]&format=dec&value=50
+```
