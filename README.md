@@ -21,6 +21,6 @@ https://github.com/gerjanvdbosch/addon-grott
 
 ## Documentation
 
-- https://github.com/egguy/addon-grott-beta/blob/main/grott-beta/DOCS.md
+- https://github.com/gerjanvdbosch/addon-grott/blob/main/grott-beta/DOCS.md
 - https://github.com/johanmeijer/grott/wiki/Grottserver
 - https://github.com/johanmeijer/grott/blob/master/documentatie/registers.md
