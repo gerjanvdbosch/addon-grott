@@ -7,7 +7,7 @@ ENV LANG=C.UTF-8
 ENV PYTHONUNBUFFERED=1
 
 RUN apk add --update --no-cache \
-        bind-tools=9.18.39-r0
+        bind-tools
 
 # Copy data for add-on
 COPY script.sh /app/script.sh
