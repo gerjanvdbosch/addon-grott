@@ -3,10 +3,9 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/base-python:16.1.4
 FROM $BUILD_FROM
 
 ENV GIT_REF=6e0dfbef452f8510ab08041d1f1609186c5d8419
-ENV LANG C.UTF-8
-
-# Install python/pip
+ENV LANG=C.UTF-8
 ENV PYTHONUNBUFFERED=1
+
 RUN apk add --update --no-cache \
         bind-tools=9.18.39-r0
 
