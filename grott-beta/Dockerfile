@@ -5,9 +5,9 @@ FROM $BUILD_FROM
 ENV GIT_REF=6e0dfbef452f8510ab08041d1f1609186c5d8419
 ENV LANG=C.UTF-8
 ENV PYTHONUNBUFFERED=1
-# hadolint ignore=DL3008
-RUN apk add --update --no-cache \
-        bind-tools
+
+# hadolint ignore=DL3018
+RUN apk add --update --no-cache bind-tools
 
 # Copy data for add-on
 COPY script.sh /app/script.sh
