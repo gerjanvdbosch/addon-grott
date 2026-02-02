@@ -5,11 +5,8 @@ slug: grott-beta
 description: The Growatt inverter monitor with current HA plugin integrated
 url: https://github.com/gerjanvdbosch/addon-grott
 arch:
-  - armhf
-  - armv7
   - aarch64
   - amd64
-  - i386
 services:
   - mqtt:need
 init: false
