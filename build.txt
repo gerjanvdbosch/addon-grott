@@ -1,0 +1,9 @@
+docker build \
+  --build-arg BUILD_NAME=test \
+  --build-arg BUILD_DESCRIPTION=test \
+  --build-arg BUILD_ARCH=amd64 \
+  --build-arg BUILD_VERSION=0.0.0 \
+  --build-arg BUILD_DATE=$(date -u +%Y-%m-%dT%H:%M:%SZ) \
+  --build-arg BUILD_REF=local \
+  --build-arg BUILD_REPOSITORY=local \
+  -t grott-test .
